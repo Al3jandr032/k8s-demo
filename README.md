@@ -77,11 +77,15 @@ Create deployment and service objects using k8s cli or kubectl as follow:
 kubectl apply -f deployment.yaml 
 ```
 
-* service
+* Service
 ```console
 kubectl apply -f service.yaml 
 ```
 
+* Ingress
+```console
+kubectl apply -f ingress.yaml 
+```
 
 # Using a Local Registry with Minikube
 

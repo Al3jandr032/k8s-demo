@@ -40,5 +40,5 @@ user@user-laptop1:~$ docker run --name web-app -p 5050:80 registry.dev.svc.clust
 Port-forward
 
 ```console
-kubectl port-forward web-app-58bfd7d74-59wch 3000:80
+user@user-laptop1:~$ kubectl port-forward web-app-58bfd7d74-59wch 3000:80
 ```
