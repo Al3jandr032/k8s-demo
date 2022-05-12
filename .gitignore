@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+
+# WEb app node modules
+
+web-app/node_modules/
+web-app/build/
