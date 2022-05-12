@@ -1,0 +1,16 @@
+# Using base image usgin tags, avoid latest
+FROM python:3.8-alpine3.15
+RUN mkdir /api
+WORKDIR /api
+
+RUN addgroup -S admin && adduser -S admin -G admin
+USER admin
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+COPY --chown=admin:admin  main.py  /api
+
+EXPOSE 8080
+ENTRYPOINT ["python"]
+CMD ["main.py"]

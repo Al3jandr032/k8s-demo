@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-server-api
+  labels:
+    app: simple-server-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-server-api
+  template:
+    metadata:
+      labels:
+        app: simple-server-api
+    spec:
+      containers:
+      - name: simple-server-api
+        image: registry.dev.svc.cluster.local:5001/simple-server:dev-python3.8
